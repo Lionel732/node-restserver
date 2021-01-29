@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 
 app.get('/usuario', function (req, res) {
 
-    res.json('post usuario')
+    res.json('Get usuario')
 })
 
 app.post('/usuario', function (req, res) {
