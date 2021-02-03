@@ -4,7 +4,7 @@ port = process.env.PORT || 3000;
 //entorno
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
-// Base de datos
+// Base de datoss
 let urlDB;
 
 if (process.env.NODE_ENV === 'dev') {
