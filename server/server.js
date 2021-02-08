@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const { json } = require('express');
+//const { json } = require('express');
 
 app.use(bodyParser.urlencoded({extended: false})); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
@@ -15,8 +15,10 @@ mongoose.connect(process.env.URLDB,
     console.log('Base de datos ONLINE');
 })
 
-app.use(require('./routes/usuario'));
+// Cargamos todas las rutas (Configuracion global de rutas)
+app.use(require('./routes/index'));
 
+// Escuchando el puerto que definimos
 app.listen(port, () => {
     console.log('Escuchando puerto', port);
 })
